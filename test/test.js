@@ -1,5 +1,5 @@
 var assert = require('assert');
-import DegreeQuestions from '../lib/degree-questions';
+import DegreeQuestions from '../lib/questions/degree-questions';
 import util from '../lib/util';
 
 describe('util', function() { 
