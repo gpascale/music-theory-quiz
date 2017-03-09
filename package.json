@@ -1,6 +1,6 @@
 {
   "name": "music-theory-quiz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "music theory question/answer generator",
   "main": "dist/lib/index.js",
   "dependencies": {
