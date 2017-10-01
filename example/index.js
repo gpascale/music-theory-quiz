@@ -4,9 +4,9 @@ var rl = readline.createInterface({
   output: process.stdout
 });
 
-import DegreeQuestions from '../lib/degree-questions';
+const DegreeQuestions = require('../lib').DegreeQuestions;
 
-console.log("type 'exit' at any time to quit");
+console.log('type \'exit\' at any time to quit');
 
 var degreeQuestions = new DegreeQuestions();
 
@@ -15,8 +15,8 @@ var degreeQuestions = new DegreeQuestions();
   rl.question(q.questionText, function(message) {
     if (message == 'exit') //we need some base case, for recursion
       return rl.close(); //closing RL and returning from function.
-    var answer = q.answer.name().toUpperCase() + q.answer.accidental();
-    console.dir('The answer was ' + answer);
+    var answer =
+    console.dir('The answer was ' + q.answer);
     askQuestion();
   });
 })();
