@@ -57,7 +57,7 @@ class ChordQuestions {
     }
 
     return {
-      questionText: 'Spell a ' + util.noteFriendlyName(root) + ' ' + chordQuality + ' chord',
+      questionText: 'Spell ' + util.articleify(util.noteFriendlyName(root)) + ' ' + chordQuality + ' chord',
       answer: answer
     };
   }

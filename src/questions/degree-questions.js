@@ -25,9 +25,9 @@ class DegreeQuestions {
   generate() {
     // Choose a random key and degree
     if (!this.options.keys || !this.options.keys.length)
-      throw("must provide at least one key");
+      throw('must provide at least one key');
     if (!this.options.degrees || !this.options.degrees.length)
-      throw("must provide at least one degree");
+      throw('must provide at least one degree');
     var key = chance.pickone(this.options.keys);
     var degree = util.DegreeByName(chance.pickone(this.options.degrees));
 
@@ -37,7 +37,7 @@ class DegreeQuestions {
     return {
       questionText: 'What is ' + degree.name + ' of ' + key + '?\n',
       answer: endingNote.name().toUpperCase() + endingNote.accidental()
-    }
+    };
   }
 }
 
