@@ -2,7 +2,7 @@ const Chance = require('chance');
 const chance = new Chance();
 import { Note, Chord, Scale, Interval } from 'teoria';
 import util from '../util';
-import Constants, { Keys, Degrees, ChordScales } from '../constants';
+import Constants, { MajorKeys, Degrees, ChordScales } from '../constants';
 
 // Chord spelling questions can be generated in one of two ways, or "strategys".
 // - In the diatonic strategy, a list of keys is selected and chords are chosen
@@ -13,10 +13,10 @@ import Constants, { Keys, Degrees, ChordScales } from '../constants';
 
 const defaults = {
   // Used in diatonic strategy
-  keys: Keys,
+  keys: MajorKeys,
   // Used in verbose strategy
   chordQualities: Constants.BasicSeventhChordQualities,
-  roots: Keys,
+  roots: MajorKeys,
 
   strategy: 'diatonic'
 };

@@ -1,23 +1,24 @@
 
 exports.MajorKeys = [ 'C', 'F', 'Bb', 'Eb', 'Ab', 'Db', 'Gb', 'B', 'E', 'A', 'D', 'G' ];
 exports.MinorKeys = [ 'a', 'd', 'g', 'c', 'f', 'bb', 'eb', 'g#', 'c#', 'f#', 'b', 'e' ];
+exports.Keys = [ ...exports.MajorKeys, ...exports.MinorKeys ];
 
 exports.Degrees = [
- { name: 'b2', interval: 'm2', alternateNames: ['b9'] },
- { name: '2', interval: 'M2', alternateNames: ['9'] },
- { name: '#9', interval: 'A2' },
- { name: 'b3', interval: 'm3' },
- { name: '3', interval: 'M3' },
- { name: '4', interval: 'P4', alternateNames: ['11'] },
- { name: '#4', interval: 'A4', alternateNames: ['#11'] },
- { name: 'b5', interval: 'd5' },
- { name: '5', interval: 'P5' },
- { name: '#5', interval: 'A5' },
- { name: 'b6', interval: 'm6', alternateNames: ['b13'] },
- { name: '6', interval: 'M6', alternateNames: ['13'] },
- { name: 'bb7', interval: 'd7' },
- { name: 'b7', interval: 'm7' },
- { name: '7', interval: 'M7' }
+  { name: 'b2', interval: 'm2', alternateNames: ['b9'] },
+  { name: '2', interval: 'M2', alternateNames: ['9'] },
+  { name: '#9', interval: 'A2' },
+  { name: 'b3', interval: 'm3' },
+  { name: '3', interval: 'M3' },
+  { name: '4', interval: 'P4', alternateNames: ['11'] },
+  { name: '#4', interval: 'A4', alternateNames: ['#11'] },
+  { name: 'b5', interval: 'd5' },
+  { name: '5', interval: 'P5' },
+  { name: '#5', interval: 'A5' },
+  { name: 'b6', interval: 'm6', alternateNames: ['b13'] },
+  { name: '6', interval: 'M6', alternateNames: ['13'] },
+  { name: 'bb7', interval: 'd7' },
+  { name: 'b7', interval: 'm7' },
+  { name: '7', interval: 'M7' }
 ];
 
 exports.ChordQualities = [
@@ -39,3 +40,9 @@ exports.BasicSeventhChordQualities = [
 exports.ChordScales = {
   MajorScale: [ 'maj7', 'min7', 'min7', 'maj7', '7', 'min7', 'min7b5' ]
 };
+
+exports.QuestionTypes = [
+  'ChordSpelling',
+  'Degree',
+  'Interval'
+];
