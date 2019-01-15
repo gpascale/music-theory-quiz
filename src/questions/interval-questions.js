@@ -1,7 +1,7 @@
 const Chance = require('chance');
 const chance = new Chance();
 import { Note, Chord, Scale, Interval } from 'teoria';
-import util from '../util';
+import { noteFriendlyName, applyDefaults } from '../util';
 import { MajorKeys, Degrees, Intervals } from '../constants';
 
 const defaults = {
@@ -12,7 +12,7 @@ const defaults = {
 
 class IntervalQuestions {
   constructor(options) {
-    this.options = util.applyDefaults(options, defaults);
+    this.options = applyDefaults(options, defaults);
   }
 
   setIntervals(intervals) {
@@ -41,8 +41,8 @@ class IntervalQuestions {
     const endingNote = startingNote.interval(interval);
 
     return {
-      questionText: 'What is a ' + interval + ' above ' + startingNote + '?\n',
-      answer: endingNote.name().toUpperCase() + endingNote.accidental()
+      questionText: `What is a ${interval} above ${noteFriendlyName(startingNote)}?`,
+      answer: noteFriendlyName(endingNote)
     };
   }
 }

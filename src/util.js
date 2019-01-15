@@ -1,4 +1,4 @@
-import Constants from './constants';
+import * as Constants from './constants';
 
 export const applyDefaults = function(obj, defaults) {
   return Object.assign({ }, defaults, obj || { });

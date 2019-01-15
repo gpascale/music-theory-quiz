@@ -1,9 +1,9 @@
 
-exports.MajorKeys = [ 'C', 'F', 'Bb', 'Eb', 'Ab', 'Db', 'Gb', 'B', 'E', 'A', 'D', 'G' ];
-exports.MinorKeys = [ 'a', 'd', 'g', 'c', 'f', 'bb', 'eb', 'g#', 'c#', 'f#', 'b', 'e' ];
-exports.Keys = [ ...exports.MajorKeys, ...exports.MinorKeys ];
+export const MajorKeys = [ 'C', 'F', 'Bb', 'Eb', 'Ab', 'Db', 'Gb', 'B', 'E', 'A', 'D', 'G' ];
+export const MinorKeys = [ 'a', 'd', 'g', 'c', 'f', 'bb', 'eb', 'g#', 'c#', 'f#', 'b', 'e' ];
+export const Keys = [ MajorKeys, MinorKeys ];
 
-exports.Degrees = [
+export const Degrees = [
   { name: 'b2', interval: 'm2', alternateNames: ['b9'] },
   { name: '2', interval: 'M2', alternateNames: ['9'] },
   { name: '#9', interval: 'A2' },
@@ -21,7 +21,7 @@ exports.Degrees = [
   { name: '7', interval: 'M7' }
 ];
 
-exports.ChordQualities = [
+export const ChordQualities = [
   'maj', 'maj6', 'maj7', 'maj7#11', 'maj7#5', 'maj9',
   'min', 'min7', 'min6', 'min9', 'min11',
   '7', '7b9', '7#5', '7b13', '9', '13', 'alt',
@@ -29,19 +29,19 @@ exports.ChordQualities = [
   'dim', 'dim7'
 ];
 
-exports.BasicChordQualities = [
+export const BasicChordQualities = [
   'maj', 'min', 'dim', 'aug'
 ];
 
-exports.BasicSeventhChordQualities = [
+export const BasicSeventhChordQualities = [
   'maj7', 'min7', '7', 'm7b5', 'dim7'
 ];
 
-exports.ChordScales = {
+export const ChordScales = {
   MajorScale: [ 'maj7', 'min7', 'min7', 'maj7', '7', 'min7', 'min7b5' ]
 };
 
-exports.QuestionTypes = [
+export const QuestionTypes = [
   'ChordSpelling',
   'Degree',
   'Interval'
