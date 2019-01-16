@@ -4,3 +4,4 @@ package-lock.json
 yarn.lock
 *.sublime*
 .DS_Store
+coverage/

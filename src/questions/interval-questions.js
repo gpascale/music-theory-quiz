@@ -28,20 +28,25 @@ class IntervalQuestions {
   }
 
   generate() {
-    // Choose a random key and degree
-    // console.log('generate, fuck');
-    // console.log('keys, degrees, intervals', this.options);
     if (!this.options.keys || !this.options.keys.length)
       throw('must provide at least one key');
     //
     const key = chance.pickone(this.options.keys);
     const degree = chance.pickone(this.options.degrees);
-    const startingNote = Note.fromString(key).interval(degree.interval);
     const interval = chance.pickone(this.options.intervals);
-    const endingNote = startingNote.interval(interval);
+
+    const flip = chance.bool();
+    let startingNote = Note.fromString(key).interval(degree.interval);
+    let endingNote = startingNote.interval(interval);
+
+    if (flip) {
+      const tmp = startingNote;
+      startingNote = endingNote;
+      endingNote = tmp;
+    }
 
     return {
-      questionText: `What is a ${interval} above ${noteFriendlyName(startingNote)}?`,
+      questionText: `What is a ${interval} ${flip ? 'below' : 'above'} ${noteFriendlyName(startingNote)}?`,
       answer: noteFriendlyName(endingNote)
     };
   }

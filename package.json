@@ -11,50 +11,22 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
+    "babel-preset-env": "^1.7.0",
+    "concurrently": "^4.1.0",
+    "jest": "^23.6.0",
     "mocha": "^3.2.0",
     "npm-watch": "^0.1.9",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register",
-    "watch": "npm-watch",
+    "dev": "nodemon --exec \"npm run build && npm run test\" --watch src --watch test --watch package.json",
+    "dev:bundle": "nodemon --exec \"npm run bundle && npm run test\" --watch src --watch test --watch package.json",
+    "test": "jest",
     "build": "./build.sh",
     "bundle": "webpack --progress --colors",
     "prepublish": "./build.sh"
   },
   "author": "Greg Pascale (greg.pascale@gmail.com)",
-  "license": "ISC",
-  "watch": {
-    "test": {
-      "patterns": [
-        "src",
-        "test"
-      ],
-      "extensions": [
-        "*"
-      ]
-    },
-    "build": {
-      "patterns": [
-        "src",
-        "test",
-        "package.json"
-      ],
-      "extensions": [
-        "*"
-      ]
-    },
-    "bundle": {
-      "patterns": [
-        "src",
-        "test",
-        "package.json"
-      ],
-      "extensions": [
-        "*"
-      ]
-    }
-  }
+  "license": "MIT"
 }

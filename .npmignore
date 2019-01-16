@@ -1,6 +1,7 @@
 src/
 vendor/
 test/
+coverage/
 yarn.lock
 package-lock.json
 .gitignore
